@@ -3,6 +3,9 @@ import emailIcon from '../Assets/Icon/Message.png';
 import passwordIcon from '../Assets/Icon/Lock.png';
 import React, { useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
+import generalStyle from '../General.css';
+import loginStyle from '../Login/Login.css';
+import dashboardStyle from '../DashboardStyle.css';
 
 function LoginForm(){
     let navigate = useNavigate();

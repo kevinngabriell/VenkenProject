@@ -1,18 +1,13 @@
 import React, { useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoutIcon from './Assets/Icon/Logout.png';
-import settingInactive from './Assets/Icon/SettingInactive.png';
-import dashboardActive from './Assets/Icon/DashboardActive.png';
-import salesInactive from './Assets/Icon/SalesInactive.png';
-import purchasingIncative from './Assets/Icon/PurchasingInactive.png';
-import financeInactive from './Assets/Icon/FinanceInactive.png';
-import warehouseInactive from './Assets/Icon/WarehouseInactive.png';
-import hrInactive from './Assets/Icon/HRInactive.png';
-import analyticsInactive from './Assets/Icon/AnalyticsInactive.png';
-import documentInactive from './Assets/Icon/DocumentInactive.png';
+import generalStyle from './General.css';
+import loginStyle from './Login/Login.css';
+import dashboardStyle from './DashboardStyle.css';
 import {Chart, ArcElement, CategoryScale, LinearScale, BarController, BarElement} from 'chart.js';
+import { Pie, Doughnut, Bar } from 'react-chartjs-2';
+import DashboardMenuSection from './DashboardMenuSection';
+import DashboardTop from './DashboardTop';
 Chart.register(ArcElement, CategoryScale, LinearScale, BarController, BarElement);
-
 
 const data = { 
     labels: ['62% sales by ABC Product', '62% sales by ABC Product', '62% sales by ABC Product'], 
@@ -53,62 +48,71 @@ function Dashboard(){
     return (
         <div className='container'>
             <div className='menu-section'>
-                <ul className='first-menu'>
-                    <li> 
-                        <div className="menu-item-active">
-                            <img src={dashboardActive} alt='icon' />
-                            <p className="menu-item-text-active">Dashboard</p>
-                        </div>    
-                    </li>
-                    <li>
-                        <div className="menu-item">
-                            <img src={salesInactive} alt='icon' />
-                            <p className="menu-item-text">Sales</p>
-                        </div>
-                    </li>  
-                    <li>
-                        <div className="menu-item" onClick={() => navigate('/purchasing/purchasingIndex')}>
-                            <img src={purchasingIncative} alt='icon' />
-                            <p className="menu-item-text">Purchasing</p>
-                        </div>
-
-                    </li>  
-                    <li>
-                        <div className="menu-item">
-                            <img src={financeInactive} alt='icon' />
-                            <p className="menu-item-text">Finance</p>
-                        </div>
-                    </li>  
-                    <li>
-                        <div className="menu-item">
-                            <img src={warehouseInactive} alt='icon' />
-                            <p className="menu-item-text">Warehouse</p>
-                        </div>
-                    </li> 
-                    <li>
-                        <div className="menu-item">
-                            <img src={hrInactive} alt='icon' />
-                            <p className="menu-item-text">HR</p>
-                        </div>
-                    </li> 
-                    <li>
-                        <div className="menu-item">
-                            <img src={analyticsInactive} alt='icon' />
-                            <p className="menu-item-text">Analytics</p>
-                        </div>
-                    </li> 
-                    <li>
-                        <div className="menu-item">
-                            <img src={documentInactive} alt='icon' />
-                            <p className="menu-item-text">Document</p>
-                        </div>
-                    </li>  
-                </ul>
+                <DashboardMenuSection/>
             </div>
             <div className='dashboard-section'>
+                <DashboardTop/>
+                <div className='dashboard-main'>
+                    <div className='dashboard-title'>Dashboard</div>
+                    <div className='overview-container'>
+                        <div className='overview-items'>
+                            <div className='overview-title'>Overview</div>
+                        </div>
+                        <div className='overview-items-cards'>
+                            <div className='overview-cards-1'>
+                                <div className='card-title'>Attandance</div>
+                                <div className='card-number'>12</div>
+                            </div>
+                            <div className='overview-cards-2'>
+                                <div className='card-title'>Late</div>
+                                <div className='card-number'>12</div>
+                            </div>
+                            <div className='overview-cards-3'>
+                                <div className='card-title'>Absent</div>
+                                <div className='card-number'>12</div>
+                            </div>
+                            <div className='overview-cards-4'>
+                                <div className='card-title'>Remaining Leave</div>
+                                <div className='card-number'>12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='chart-container'>
+                        <div className='top-product-container'>
+                            <div className='overview-items'>
+                                <div className='card-title-chart'>Top Product by Sales</div>
+                                <div className='dought-chart'>
+                                    <Doughnut data={data} />
+                                </div>
+                                <div className='dough-chart'>
+                                    <div className='dough-label'>
+                                        {data.labels.map((label, index) => (
+                                        <div key={index} className="data-label">
+                                            <div 
+                                            className="color-box"
+                                            style={{backgroundColor: data.datasets[0].backgroundColor[index]}} 
+                                            />
+                                            <div className="label-text">
+                                                {label}
+                                            </div>
+                                        </div>
+                                        ))}
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+                        <div className='sales-bar-container'>
+                            <div className='overview-items'>
+                                <div className='card-title-chart'>Sales in a year</div>
+                                <div className='bar-chart'>
+                                    <Bar data={Bardata} options={Baroptions} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            ffff
         </div>
     );
 }

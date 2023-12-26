@@ -1,0 +1,69 @@
+.App {
+    text-align: left;
+}
+
+.App-header {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: #1A1D1F;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    color: #1A1D1F;
+    font-size: calc(25px + 2vmin);
+    font-family: Public Sans;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin-bottom: 1%;
+}
+
+.paragraph {
+    color: #818385;
+    text-align: center;
+    font-size: calc(4px + 2vmin);
+    font-weight: 500;
+    font-family: Public Sans;
+    margin-bottom: 5%;
+}
+
+.general-form-input{
+    background: var(--Neutral-02, #F4F4F4);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.general-form-input input{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    font-size: calc(1px + 2vmin);
+    margin-right: 5%;
+  }
+  
+  .general-form-input img{
+    position: relative;
+    padding: 3%;
+  }
+  
+  .general-form-input input:focus{
+    outline: none;
+  }

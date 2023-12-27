@@ -5,6 +5,7 @@ import LoginForm from './Login/LoginForm';
 import Dashboard from './Dashboard.js';
 import PurchasingIndex from './Purchasing/PurchasingIndex.js';
 import PurchasingImportForm from './Purchasing/PurchasingImportForm.js';
+import PurchasingLocalForm from './Purchasing/PurchasingLocalForm.js';
 
 function Home() {
   return <div>Home Page</div>;
@@ -17,6 +18,7 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/purchasing/purchasingIndex" element={<PurchasingIndex />} />
       <Route path="/purchasing/purchasingImportForm" element={<PurchasingImportForm />} />
+      <Route path="/purchasing/purchasingLocalForm" element={<PurchasingLocalForm />} />
       {/* Add more routes as needed */}
     </Routes>
   );

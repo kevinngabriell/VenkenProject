@@ -15,7 +15,9 @@ function PurchasingIndex(){
       
         if (selectedOption === 'create-import') {
           // Assuming navigate is a function that performs navigation
-          navigate('/purchasing/purchasingImportForm');
+            navigate('/purchasing/purchasingImportForm');
+        } else if (selectedOption == 'create-local'){
+            navigate('/purchasing/purchasingLocalForm');
         }
       };
       

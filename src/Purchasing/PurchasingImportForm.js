@@ -11,6 +11,7 @@ import ExportFormButton from '../Button/ExportFormButton';
 import UpdateStatusFormButton from '../Button/UpdateStatusButton';
 import UpdateDataFormButton from '../Button/UpdateDataFormButton';
 import SubmitFormButton from '../Button/SubmitFormButton';
+import deleteIcon from '../Assets/Icon/DeleteAction.png';
 
 function PurchasingImportForm(){
     let navigate = useNavigate();
@@ -75,6 +76,12 @@ function PurchasingImportForm(){
         setData(updatedData);
         console.log('Updated Data:', updatedData);
     };
+
+    const handleDeleteRow = (index) => {
+        const updatedData = [...QuantityData];
+        updatedData.splice(index, 1); // Remove the row at the specified index
+        setData(updatedData);
+      };
     
     const [shippingText, setShippingText] = useState('Shipping marks text');
     const handleTextChange = (event) => {
@@ -87,6 +94,11 @@ function PurchasingImportForm(){
     };
 
     const formatCurrency = (value) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+
+    const totalQuantity = QuantityData.reduce((acc, row) => acc + row.quantity, 0);
+    const totalUnitPrice = QuantityData.reduce((acc, row) => acc + row.unitprice, 0);
+    const totalAmount = QuantityData.reduce((acc, row) => acc + row.quantity * row.unitprice, 0);
+
     return(
         <div className='container'>
             <div className='menu-section'>
@@ -164,17 +176,18 @@ function PurchasingImportForm(){
                         <table className="data-table">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Product Name</th>
-                                    <th>Quantity</th>
+                                    <th style={{ width: '20px' }}>No</th>
+                                    <th style={{ width: '242px' }}>Product Name</th>
+                                    <th style={{ width: '82px' }}>Quantity</th>
                                     <th>Packaging Size</th>
                                     <th>Unit Price</th>
                                     <th>Total</th>
+                                    <th style={{ width: '20px' }}>Action</th>
                                 </tr>
                             </thead>
-                                <tbody>
-                                    {QuantityData.map((row, index) => (
-                                        <tr key={row.no}>
+                            <tbody>
+                                {QuantityData.map((row, index) => (
+                                    <tr key={row.no}>
                                             <td className="table-center">{row.no}</td>
                                             <td>{row.productname}</td>
                                             <td className="table-center">
@@ -188,10 +201,27 @@ function PurchasingImportForm(){
                                             <td className="table-center">{row.packagingsize}</td>
                                             <td className="table-center">{formatCurrency(row.unitprice)}</td>
                                             <td className="table-center">{formatCurrency(row.quantity * row.unitprice)}</td>
+                                            <td className="table-center" onClick={() => handleDeleteRow(index)}>
+                                                <img src={deleteIcon} className='delete-action-table'/>
+                                            </td>
                                         </tr>
                                     ))}
                                     </tbody>
-                                </table>
+                                    <tfoot>
+                                        <tr>
+                                        <td colSpan="2"></td>
+                                        <td className="table-center">
+                                            <div className='quantity-input'>
+                                                {totalQuantity}
+                                            </div>
+                                        </td>
+                                        <td colSpan="1"></td>
+                                        <td className="table-center" colSpan="1">{formatCurrency(totalUnitPrice)}</td>
+                                        <td className="table-center">{formatCurrency(totalAmount)}</td>
+                                        <td></td>
+                                        </tr>
+                                    </tfoot>
+                        </table>
                         <div className='form-grid-container-2'>
                             <div>
                                 <div className='form-label'>Origin</div>

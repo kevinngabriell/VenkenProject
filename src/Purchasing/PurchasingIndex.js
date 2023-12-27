@@ -68,30 +68,50 @@ function PurchasingIndex(){
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='even-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='even-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,30 +121,50 @@ function PurchasingIndex(){
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='even-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                         <div className='even-list-items'>
                             <img src={cocoaImages} className='list-images' />
-                            <div className='list-items-text'>
+                            <div>
                                 <div className='list-items-text-1'>#52217221</div>
                                 <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
                             </div>
                         </div>
                     </div>

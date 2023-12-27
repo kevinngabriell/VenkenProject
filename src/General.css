@@ -339,3 +339,102 @@
   font-style: normal;
   font-weight: 600;
 }
+
+.form-grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto; /* Three columns with auto sizing based on content */
+  gap: 16px; /* Adjust the gap between columns as needed */
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+
+.form-label{
+  color: #787878;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px; /* 160% */
+  letter-spacing: -0.15px;
+}
+
+.autofill-form-label{
+  color: #2A85FF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 160% */
+  letter-spacing: -0.4px;
+}
+
+.general-dropdown{
+  padding: 2%;
+  width: 85%;
+  border-radius: 12px;
+  border: 1px solid #E7E7E7;
+  color: var(--neutral-shades-0475, #9A9FA5);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 160% */
+  letter-spacing: -0.15px;
+}
+
+.product-form-input{
+  width: 220%;
+  border-radius: 12px;
+  background: #F4F4F4;
+  padding: 2%;
+}
+
+.product-form-input input{
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-size: calc(1px + 2vmin);
+  margin-right: 5%;
+}
+
+.product-form-input input:focus{
+  outline: none;
+}
+
+.data-table{
+  width: 133%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.data-table th {
+  border: 1px solid #EFEFEF;
+  padding: 8px;
+  text-align: center;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.data-table td {
+  border-right: 1px solid #EFEFEF;
+  border-left: 1px solid #EFEFEF;
+  padding: 8px;
+  text-align: left;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.data-table tr:not(:last-child) {
+  border-bottom: none;
+}
+
+.data-table tr:last-child {
+  border-bottom: 1px solid #EFEFEF; /* Add bottom border to the last row */
+}
+
+.data-table .table-center {
+  text-align: center;
+}

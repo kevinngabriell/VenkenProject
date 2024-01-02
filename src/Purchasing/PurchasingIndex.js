@@ -128,7 +128,7 @@ function PurchasingIndex(){
                                 <div className='overview-title'>Items in Local</div>
                             </div>
                             <div>
-                                <div className='see-all'>see all</div>
+                                <div className='see-all' onClick={() => navigate('/purchasing/allItemsLocal')}>see all</div>
                             </div>
                         </div>
                         <div className='odd-list-items'>
@@ -186,7 +186,7 @@ function PurchasingIndex(){
                                 <div className='overview-title'>Purchase Order Form</div>
                             </div>
                             <div>
-                                <div className='see-all'>see all</div>
+                                <div className='see-all' onClick={() => navigate('/purchasing/allPORecord')}>see all</div>
                             </div>
                         </div>
                         <div className='odd-list-items'>

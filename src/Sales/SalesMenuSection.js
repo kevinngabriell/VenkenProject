@@ -72,7 +72,7 @@ function SalesMenuSection(){
                 </div>
                 <ul className='secondary-menu'>
                     <li>
-                        <div className="menu-item">
+                        <div className="menu-item" onClick={() => navigate('/sales/settingIndex')}>
                             <img src={settingInactive} alt='icon' />
                             <p className="menu-item-text">Settings</p>
                         </div>

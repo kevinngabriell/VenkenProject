@@ -1,8 +1,8 @@
 import logoutIcon from '../Assets/Icon/Logout.png';
-import settingInactive from '../Assets/Icon/SettingInactive.png';
+import settingActive from '../Assets/Icon/SettingActive.png';
 import dashboardInactive from '../Assets/Icon/DashboardInactive.png';
 import salesInactive from '../Assets/Icon/SalesInactive.png';
-import purchasingActive from '../Assets/Icon/PurchasingActive.png';
+import purchasingInactive from '../Assets/Icon/PurchasingInactive.png';
 import financeInactive from '../Assets/Icon/FinanceInactive.png';
 import warehouseInactive from '../Assets/Icon/WarehouseInactive.png';
 import hrInactive from '../Assets/Icon/HRInactive.png';
@@ -11,10 +11,10 @@ import documentInactive from '../Assets/Icon/DocumentInactive.png';
 import { useNavigate } from 'react-router-dom';
 import React, { useState }  from 'react';
 
-function PurchasingMenuSection(){
+function SettingMenuSection(){
     let navigate = useNavigate();
 
-    return (
+    return(
         <div className='menu-section'>
             <ul className='first-menu'>
                 <li> 
@@ -30,9 +30,9 @@ function PurchasingMenuSection(){
                         </div>
                     </li>  
                     <li>
-                        <div className="menu-item-active" onClick={() => navigate('/purchasing/purchasingIndex')}>
-                            <img src={purchasingActive} alt='icon' />
-                            <p className="menu-item-text-active">Purchasing</p>
+                        <div className="menu-item" onClick={() => navigate('/purchasing/purchasingIndex')}>
+                            <img src={purchasingInactive} alt='icon' />
+                            <p className="menu-item-text">Purchasing</p>
                         </div>
 
                     </li>  
@@ -71,9 +71,9 @@ function PurchasingMenuSection(){
                 </div>
                 <ul className='secondary-menu'>
                     <li>
-                        <div className="menu-item" onClick={() => navigate('/sales/settingIndex')}>
-                            <img src={settingInactive} alt='icon' />
-                            <p className="menu-item-text">Settings</p>
+                        <div className="menu-item-active">
+                            <img src={settingActive} alt='icon' />
+                            <p className="menu-item-text-active">Settings</p>
                         </div>
                     </li>    
                     <li>
@@ -85,6 +85,6 @@ function PurchasingMenuSection(){
                 </ul>  
             </div>
     );
-}
+};
 
-export default PurchasingMenuSection;
+export default SettingMenuSection;

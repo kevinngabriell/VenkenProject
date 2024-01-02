@@ -15,6 +15,7 @@ import SalesIndex from './Sales/SalesIndex.js';
 import SalesNewSO from './Sales/SalesNewSO.js';
 import SalesNewSPPB from './Sales/SalesNewSPPB.js';
 import SalesNewProfit from './Sales/SalesNewProfit.js';
+import SettingIndex from './Setting/SettingIndex.js';
 
 function Home() {
   return <div>Home Page</div>;
@@ -37,6 +38,7 @@ function App() {
       <Route path="/sales/salesNewSO" element={<SalesNewSO />} />
       <Route path="/sales/salesNewSPPB" element={<SalesNewSPPB />} />
       <Route path="/sales/salesNewProfit" element={<SalesNewProfit />} />
+      <Route path="/sales/settingIndex" element={<SettingIndex />} />
       {/* Add more routes as needed */}
     </Routes>
   );

@@ -19,7 +19,7 @@ function SalesIndex(){
         } else if (selectedOption == 'create-new-sppb'){
             navigate('/sales/salesNewSPPB');
         } else if (selectedOption == 'create-new-profit'){
-            navigate('/sales/salesNewSPPB');
+            navigate('/sales/salesNewProfit');
         }
     };
 
@@ -185,6 +185,122 @@ function SalesIndex(){
                         <div className='card-title-module'>
                             <div>
                                 <div className='overview-title'>Sales Order</div>
+                            </div>
+                            <div>
+                                <div className='see-all' onClick={() => navigate('/purchasing/allItemsInPort')}>see all</div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overview-container'>
+                        <div className='card-title-module'>
+                            <div>
+                                <div className='overview-title'>SPPB</div>
+                            </div>
+                            <div>
+                                <div className='see-all' onClick={() => navigate('/purchasing/allItemsInPort')}>see all</div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyImport')}>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overview-container'>
+                        <div className='card-title-module'>
+                            <div>
+                                <div className='overview-title'>Profit</div>
                             </div>
                             <div>
                                 <div className='see-all' onClick={() => navigate('/purchasing/allItemsInPort')}>see all</div>

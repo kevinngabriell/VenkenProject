@@ -14,6 +14,7 @@ import ReadOnlyLocal from './Purchasing/ReadOnlyLocal.js';
 import SalesIndex from './Sales/SalesIndex.js';
 import SalesNewSO from './Sales/SalesNewSO.js';
 import SalesNewSPPB from './Sales/SalesNewSPPB.js';
+import SalesNewProfit from './Sales/SalesNewProfit.js';
 
 function Home() {
   return <div>Home Page</div>;
@@ -35,6 +36,7 @@ function App() {
       <Route path="/sales/salesIndex" element={<SalesIndex />} />
       <Route path="/sales/salesNewSO" element={<SalesNewSO />} />
       <Route path="/sales/salesNewSPPB" element={<SalesNewSPPB />} />
+      <Route path="/sales/salesNewProfit" element={<SalesNewProfit />} />
       {/* Add more routes as needed */}
     </Routes>
   );

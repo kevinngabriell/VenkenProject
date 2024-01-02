@@ -1,22 +1,20 @@
 import React, { useState }  from 'react';
-import DashboardTop from '../DashboardTop';
 import generalStyle from '../General.css';
 import { useNavigate } from 'react-router-dom';
+import DashboardTop from '../DashboardTop';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import SalesMenuSection from './SalesMenuSection';
 import ExportFormButton from '../Button/ExportFormButton';
 import UpdateStatusFormButton from '../Button/UpdateStatusButton';
 import UpdateDataFormButton from '../Button/UpdateDataFormButton';
 import SubmitFormButton from '../Button/SubmitFormButton';
+import SalesMenuSection from './SalesMenuSection';
 
-function SalesNewSPPB(){
+function SalesNewProfit(){
     let navigate = useNavigate();
-
-    const [date, setDate] = useState(new Date());
-
+   
     const [selectedCustomerValue, setselectedCustomerValue] = useState('');
-    
+
     const handleDropdownCustomerChange = (event) => {
         const selectedOption = event.target.value;
         setselectedCustomerValue(selectedOption);
@@ -33,16 +31,12 @@ function SalesNewSPPB(){
                     <div className='dashboard-title'>Sales Module</div>
                     <div className='overview-container'>
                         <div className='overview-items'>
-                            <div className='overview-title'>New Surat Permintaan Pengeluaran Barang</div>
+                            <div className='overview-title'>New Profit</div>
                         </div>
                         <div className='form-grid-container'>
                             <div>
-                                <div className='form-label'>NO. SPPB</div>
+                                <div className='form-label'>Sales Order Number</div>
                                 <div className='autofill-form-label'>#24122178</div>
-                            </div>
-                            <div>
-                                <div className='form-label'>Tanggal</div>
-                                <DatePicker className='general-dropdown' selected={date} onChange={(date) => setDate(date)} />
                             </div>
                             <div>
                                 <div className='form-label'>Customer</div>
@@ -55,23 +49,16 @@ function SalesNewSPPB(){
                                 </select>
                             </div>
                         </div>
-                        <div className='form-browse-product'>
-                            <div className='form-label'>Search Product</div>
-                            <div className="product-form-input">
-                                <input type="text" placeholder="Browse Product"/>
-                            </div>
-                        </div>
                         <table className="data-table">
                             <thead>
                                 <tr>
                                     <th style={{ width: '20px' }}>No</th>
-                                    <th style={{ width: '202px' }}>PO Customer</th>
-                                    <th style={{ width: '82px' }}>Dikirim ke</th>
-                                    <th style={{ width: '100px' }}>Tanggal Kirim</th>
-                                    <th style={{ width: '242px' }}>Nama Barang</th>
-                                    <th>QTY</th>
-                                    <th>SAT</th>
-                                    <th style={{ width: '242px' }}>Keterangan</th>
+                                    <th style={{ width: '242px' }}>Product Name</th>
+                                    <th style={{ width: '82px' }}>Quantity</th>
+                                    <th>Harga Jual Satuan</th>
+                                    <th>Landed Cost</th>
+                                    <th>Profit</th>
+                                    <th>Profit %</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -83,9 +70,18 @@ function SalesNewSPPB(){
                                     <td>a</td>
                                     <td>a</td>
                                     <td>a</td>
-                                    <td>a</td>
                                 </tr>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colSpan="2">Total</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                </tr>
+                            </tfoot>
                         </table>
                         <div className='buttons-grid'>
                             <ExportFormButton/>
@@ -100,4 +96,4 @@ function SalesNewSPPB(){
     );
 };
 
-export default SalesNewSPPB;
+export default SalesNewProfit;

@@ -17,9 +17,9 @@ function SalesIndex(){
           // Assuming navigate is a function that performs navigation
             navigate('/sales/salesNewSO');
         } else if (selectedOption == 'create-new-sppb'){
-            navigate('/purchasing/purchasingLocalForm');
+            navigate('/sales/salesNewSPPB');
         } else if (selectedOption == 'create-new-profit'){
-            navigate('/purchasing/purchasingLocalForm');
+            navigate('/sales/salesNewSPPB');
         }
     };
 

@@ -24,7 +24,7 @@ function PurchasingMenuSection(){
                     </div>    
                 </li>
                 <li>
-                        <div className="menu-item">
+                        <div className="menu-item" onClick={() => navigate('/sales/salesIndex')}>
                             <img src={salesInactive} alt='icon' />
                             <p className="menu-item-text">Sales</p>
                         </div>

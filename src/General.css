@@ -708,6 +708,13 @@
   padding-bottom: 4%;
 }
 
+.overview-container-split-2{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; 
+  margin-right: 5%;
+}
+
 .form-grid-container > div:last-child {
   margin-right: 0; /* Remove margin from the last div to avoid extra spacing */
   order: 1; /* Set the order to move the last div to the end */

@@ -1,37 +1,38 @@
-import logoutIcon from './Assets/Icon/Logout.png';
-import settingInactive from './Assets/Icon/SettingInactive.png';
-import dashboardActive from './Assets/Icon/DashboardActive.png';
-import salesInactive from './Assets/Icon/SalesInactive.png';
-import purchasingIncative from './Assets/Icon/PurchasingInactive.png';
-import financeInactive from './Assets/Icon/FinanceInactive.png';
-import warehouseInactive from './Assets/Icon/WarehouseInactive.png';
-import hrInactive from './Assets/Icon/HRInactive.png';
-import analyticsInactive from './Assets/Icon/AnalyticsInactive.png';
-import documentInactive from './Assets/Icon/DocumentInactive.png';
+import logoutIcon from '../Assets/Icon/Logout.png';
+import settingInactive from '../Assets/Icon/SettingInactive.png';
+import dashboardInactive from '../Assets/Icon/DashboardInactive.png';
+import salesActive from '../Assets/Icon/SalesActive.png';
+import salesInactive from '../Assets/Icon/SalesInactive.png';
+import purchasingInactive from '../Assets/Icon/PurchasingInactive.png';
+import financeInactive from '../Assets/Icon/FinanceInactive.png';
+import warehouseInactive from '../Assets/Icon/WarehouseInactive.png';
+import hrInactive from '../Assets/Icon/HRInactive.png';
+import analyticsInactive from '../Assets/Icon/AnalyticsInactive.png';
+import documentInactive from '../Assets/Icon/DocumentInactive.png';
 import { useNavigate } from 'react-router-dom';
 import React, { useState }  from 'react';
 
-function DashboardMenuSection(){
+function SalesMenuSection(){
     let navigate = useNavigate();
 
-    return (
-        <div className='menu-section'>
+    return(
+       <div className='menu-section'>
             <ul className='first-menu'>
                 <li> 
-                    <div className="menu-item-active" onClick={() => navigate('/dashboard')}>
-                        <img src={dashboardActive} alt='icon' />
-                        <p className="menu-item-text-active">Dashboard</p>
+                    <div className="menu-item" onClick={() => navigate('/dashboard')}>
+                        <img src={dashboardInactive} alt='icon' />
+                        <p className="menu-item-text">Dashboard</p>
                     </div>    
                 </li>
                 <li>
-                        <div className="menu-item" onClick={() => navigate('/sales/salesIndex')}>
-                            <img src={salesInactive} alt='icon' />
-                            <p className="menu-item-text">Sales</p>
+                        <div className="menu-item-active" onClick={() => navigate('/sales/salesIndex')}>
+                            <img src={salesActive} alt='icon' />
+                            <p className="menu-item-text-active">Sales</p>
                         </div>
                     </li>  
                     <li>
                         <div className="menu-item" onClick={() => navigate('/purchasing/purchasingIndex')}>
-                            <img src={purchasingIncative} alt='icon' />
+                            <img src={purchasingInactive} alt='icon' />
                             <p className="menu-item-text">Purchasing</p>
                         </div>
 
@@ -85,6 +86,6 @@ function DashboardMenuSection(){
                 </ul>  
             </div>
     );
-}
+};
 
-export default DashboardMenuSection;
+export default SalesMenuSection;

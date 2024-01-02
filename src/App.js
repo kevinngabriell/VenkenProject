@@ -11,6 +11,8 @@ import AllItemsLocal from './Purchasing/AllItemsLocal.js';
 import AllPurchaseRecord from './Purchasing/AllPurchaseRecord.js';
 import ReadOnlyImport from './Purchasing/ReadOnlyImport.js';
 import ReadOnlyLocal from './Purchasing/ReadOnlyLocal.js';
+import SalesIndex from './Sales/SalesIndex.js';
+import SalesNewSO from './Sales/SalesNewSO.js';
 
 function Home() {
   return <div>Home Page</div>;
@@ -29,6 +31,8 @@ function App() {
       <Route path="/purchasing/allPORecord" element={<AllPurchaseRecord />} />
       <Route path="/purchasing/readOnlyImport" element={<ReadOnlyImport />} />
       <Route path="/purchasing/readOnlyLocal" element={<ReadOnlyLocal />} />
+      <Route path="/sales/salesIndex" element={<SalesIndex />} />
+      <Route path="/sales/salesNewSO" element={<SalesNewSO />} />
       {/* Add more routes as needed */}
     </Routes>
   );

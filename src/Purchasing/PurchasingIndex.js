@@ -65,8 +65,13 @@ function PurchasingIndex(){
                         </div>
                     </div>
                     <div className='overview-container'>
-                        <div className='overview-items'>
-                            <div className='overview-title'>Items in Port</div>
+                        <div className='card-title-module'>
+                            <div>
+                                <div className='overview-title'>Items in Port</div>
+                            </div>
+                            <div>
+                                <div className='see-all' onClick={() => navigate('/purchasing/allItemsInPort')}>see all</div>
+                            </div>
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />
@@ -118,8 +123,71 @@ function PurchasingIndex(){
                         </div>
                     </div>
                     <div className='overview-container'>
-                        <div className='overview-items'>
-                            <div className='overview-title'>Items in Transit (Local)</div>
+                        <div className='card-title-module'>
+                            <div>
+                                <div className='overview-title'>Items in Local</div>
+                            </div>
+                            <div>
+                                <div className='see-all'>see all</div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='odd-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                        <div className='even-list-items'>
+                            <img src={cocoaImages} className='list-images' />
+                            <div>
+                                <div className='list-items-text-1'>#52217221</div>
+                                <div className='list-items-text-2'>1 Days</div>
+                            </div>
+                            <div>
+                                <div className='download-button'>
+                                    Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='overview-container'>
+                        <div className='card-title-module'>
+                            <div>
+                                <div className='overview-title'>Purchase Order Form</div>
+                            </div>
+                            <div>
+                                <div className='see-all'>see all</div>
+                            </div>
                         </div>
                         <div className='odd-list-items'>
                             <img src={cocoaImages} className='list-images' />

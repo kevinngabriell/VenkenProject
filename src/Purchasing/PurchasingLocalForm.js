@@ -10,6 +10,7 @@ import SubmitFormButton from '../Button/SubmitFormButton';
 import paperIcon from '../Assets/Icon/Paper.png';
 import downloadIcon from '../Assets/Icon/Download.png';
 import deleteIcon from '../Assets/Icon/DeleteAction.png';
+import Autosuggest from 'react-autosuggest';
 
 function PurchasingLocalForm(){
     let navigate = useNavigate();
@@ -43,7 +44,7 @@ function PurchasingLocalForm(){
         { no: 2, productname: 'Milk', quantity: 10, packagingsize: 'Kg', unitprice: 1000000, total: '' },
         { no: 3, productname: 'Butter', quantity: 25, packagingsize: 'Kg', unitprice: 1000000, total: '' },
       ];
-      
+    
     const [QuantityData, setData] = useState(data);
 
     const handleQuantityChange = (index, value) => {

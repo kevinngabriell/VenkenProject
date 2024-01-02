@@ -11,6 +11,8 @@ import paperIcon from '../Assets/Icon/Paper.png';
 import downloadIcon from '../Assets/Icon/Download.png';
 import deleteIcon from '../Assets/Icon/DeleteAction.png';
 import Autosuggest from 'react-autosuggest';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function PurchasingLocalForm(){
     let navigate = useNavigate();
@@ -18,6 +20,7 @@ function PurchasingLocalForm(){
     const [selectedCustomerValue, setselectedCustomerValue] = useState('');
     const [selectedPaymentValue, setselectedPaymentValue] = useState('');
     const [selectedShipmentValue, setselectedShipmentValue] = useState('');
+    const [date, setDate] = useState(new Date());
 
     const handleDropdownCustomerChange = (event) => {
         const selectedOption = event.target.value;
@@ -92,7 +95,7 @@ function PurchasingLocalForm(){
                             </div>
                             <div>
                                 <div className='form-label'>Date</div>
-                                
+                                <DatePicker className='general-dropdown' selected={date} onChange={(date) => setDate(date)} />
                             </div>
                             <div>
                                 <div className='form-label'>To</div>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import PurchasingMenuSection from './PurchasingMenuSection';
 import DashboardTop from '../DashboardTop';
 import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import paperIcon from '../Assets/Icon/Paper.png';
 import downloadIcon from '../Assets/Icon/Download.png';
 import FormButton from '../Button/ExportFormButton';
@@ -21,6 +22,7 @@ function PurchasingImportForm(){
     const [selectedTermValue, setselectedTermValue] = useState('');
     const [selectedPaymentValue, setselectedPaymentValue] = useState('');
     const [selectedOriginValue, setselectedOriginValue] = useState('');
+    const [date, setDate] = useState(new Date());
 
     const handleDropdownCustomerChange = (event) => {
         const selectedOption = event.target.value;
@@ -119,7 +121,7 @@ function PurchasingImportForm(){
                             </div>
                             <div>
                                 <div className='form-label'>Date</div>
-                                
+                                <DatePicker className='general-dropdown' selected={date} onChange={(date) => setDate(date)} />
                             </div>
                             <div>
                                 <div className='form-label'>To</div>

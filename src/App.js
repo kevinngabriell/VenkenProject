@@ -9,6 +9,8 @@ import PurchasingLocalForm from './Purchasing/PurchasingLocalForm.js';
 import AllItemsInPort from './Purchasing/AllItemsInPort.js';
 import AllItemsLocal from './Purchasing/AllItemsLocal.js';
 import AllPurchaseRecord from './Purchasing/AllPurchaseRecord.js';
+import ReadOnlyImport from './Purchasing/ReadOnlyImport.js';
+import ReadOnlyLocal from './Purchasing/ReadOnlyLocal.js';
 
 function Home() {
   return <div>Home Page</div>;
@@ -25,6 +27,8 @@ function App() {
       <Route path="/purchasing/allItemsInPort" element={<AllItemsInPort />} />
       <Route path="/purchasing/allItemsLocal" element={<AllItemsLocal />} />
       <Route path="/purchasing/allPORecord" element={<AllPurchaseRecord />} />
+      <Route path="/purchasing/readOnlyImport" element={<ReadOnlyImport />} />
+      <Route path="/purchasing/readOnlyLocal" element={<ReadOnlyLocal />} />
       {/* Add more routes as needed */}
     </Routes>
   );

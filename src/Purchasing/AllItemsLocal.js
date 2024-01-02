@@ -75,7 +75,7 @@ function AllItemsLocal(){
                                 <div className='list-items-text-2'>1 Days</div>
                             </div>
                             <div>
-                                <div className='download-button'>
+                                <div className='download-button' onClick={() => navigate('/purchasing/readOnlyLocal')}>
                                     Details
                                 </div>
                             </div>

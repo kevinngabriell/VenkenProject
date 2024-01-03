@@ -71,7 +71,7 @@ function SettingMenuSection(){
                 </div>
                 <ul className='secondary-menu'>
                     <li>
-                        <div className="menu-item-active">
+                        <div className="menu-item-active" onClick={() => navigate('/setting/settingIndex')}>
                             <img src={settingActive} alt='icon' />
                             <p className="menu-item-text-active">Settings</p>
                         </div>

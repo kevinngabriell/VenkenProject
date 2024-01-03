@@ -71,7 +71,7 @@ function PurchasingMenuSection(){
                 </div>
                 <ul className='secondary-menu'>
                     <li>
-                        <div className="menu-item" onClick={() => navigate('/sales/settingIndex')}>
+                        <div className="menu-item" onClick={() => navigate('/setting/settingIndex')}>
                             <img src={settingInactive} alt='icon' />
                             <p className="menu-item-text">Settings</p>
                         </div>

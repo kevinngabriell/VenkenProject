@@ -30,12 +30,10 @@ function CustomerIndex(){
                                     <th>Nama Customer</th>
                                     <th>Alamat</th>
                                     <th>No Telp</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>a</td>
                                     <td>a</td>
                                     <td>a</td>
                                     <td>a</td>

@@ -27,15 +27,13 @@ function OriginIndex(){
                             <thead>
                                 <tr>
                                     <th style={{ width: '20px' }}>No</th>
-                                    <th>Nama Customer</th>
-                                    <th>Alamat</th>
-                                    <th>No Telp</th>
-                                    <th>Action</th>
+                                    <th>Nama Negara</th>
+                                    <th>Bagian</th>
+                                    <th>Free Trade Area</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>a</td>
                                     <td>a</td>
                                     <td>a</td>
                                     <td>a</td>

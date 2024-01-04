@@ -676,6 +676,12 @@
   gap: 56px; 
 }
 
+.filter-grid-2-setting{
+  display: flex;
+  justify-content: space-between;
+  gap: 56px; 
+  padding-left: 2%;
+}
 .PONumber-form-input{
   border-radius: 12px;
   background: white;

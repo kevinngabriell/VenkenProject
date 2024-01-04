@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import generalStyle from '../General.css';
 import loginStyle from '../Login/Login.css';
 import dashboardStyle from '../DashboardStyle.css';
+import axios from 'axios';
 
 function LoginForm(){
     let navigate = useNavigate();
@@ -15,19 +16,41 @@ function LoginForm(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-        // Add logic for handling login here
-        console.log('Username:', username);
-        console.log('Password:', password);
-
-        if(username !== "" && password !== ""){
-        setIsLoggedIn(true);
-        navigate("/dashboard");
-        } else {
-        alert("Silahkan masukkan username dan password anda");
-        setIsLoggedIn(false);
+    const handleLogin = async () => {
+        try {
+            const response = await fetch('https://www.kevinngabriell.com/erpsystemsapi/account/login.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: new URLSearchParams({
+                    'username': username,
+                    'password': password
+                })
+            });
+        
+            const rawResponse = await response.text(); // Get the raw response as text
+            const trimmedResponse = rawResponse.trim(); // Trim any leading or trailing whitespace
+        
+            const result = JSON.parse(trimmedResponse);
+        
+            if (response.ok) {
+                sessionStorage.setItem('username', result.username);
+                sessionStorage.setItem('company_id', result.company_id);
+                sessionStorage.setItem('employee_id', result.employee_id);
+                
+                setIsLoggedIn(true);
+                navigate("/dashboard");
+            } else {
+                alert("Silahkan periksa kembali username dan password");
+                setIsLoggedIn(false);
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
         }
-    };
+        
+      };
+      
     {/* #endregion */}
 
     return (
